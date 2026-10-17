@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+" rel="stylesheet">
+<link rel="stylesheet" href="tailwind.config.js">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #F6F3EA; overflow-x: hidden;">
+    <!-- Navbar -->
+      <nav id="home" class="z-10  fixed flex justify-between items-center text-black font-semibold md:justify-around shadow-lg" style=" background-color:#E5DDCA; height: 75px; width: 100%;font-family: 'Poppins', sans-serif; ">
+        <p id="filterBtn" ><img src="./Images/filter.png" alt="" style="cursor: pointer; margin-left: 20px; height: 16px ; width: 25px;"></p>
+        <div class="items-center md:flex gap-5 hidden">
+         
+       <a class="hover:text-green-800 font-normal" href="index.html">Home</a>
+        <button class="hover:text-green-800" data-target="men">Men</button>
+        <button class="hover:text-green-800" data-target="women">Women</button>
+        
+        </div>
+          
+        <div>
+            <img src="./Images/nostra.png" style="width: 200px; height: 70px;">
+        </div>
+        <div class="md:flex gap-7 hidden font-normal">
+        
+          <a class="hover:text-green-800" href="contact.html">Contact Us</a>
+          <img src="./Images/icons8-shopping-cart-30.png" style="cursor: pointer; margin-right: 20px; width:20px; height: 30px;" alt="">
+        </div>
+        <div id="menu" class="md:hidden" style="cursor: pointer; margin-right: 20px; width:25px; height: 20px; " >
+          <img  style="width: 100%; height: 100%;"  src="./Images/icons8-menu (1).svg" alt="">
+        </div>
+       
+      </nav>
+
+      <!-- Additinal nav -->
+       <nav id="addnav" class="hidden top-0 fixed  z-20 items-center p-5  right-0" style="width:50%; background-color: #E6DBC9; height: 100vh;">
+        <p id="navx" class="cursor-pointer" style="font-weight: bolder;">X</p>
+        <ul class="flex flex-col gap-5">
+        <li><a href="index.html">Home</a></li>
+        
+        <li><a href="contact.html">Contact Us</a></li>
+       
+        </ul>
+        
+      </nav>
+      <!-- Filter popup -->
+        <div id="filterPopup" class="top-0 fixed  z-20 items-center p-5  hidden" style="font-family: 'Cormorant', serif; font-weight:800; width:30%; background-color: #E6DBC9; height: 100vh;">
+
+    <h2 class="font-extrabold text-2xl mb-3" style="color: #344E41; ">Categories</h2>
+
+    <label>
+        <input type="checkbox" value="Summer" class="category">
+        Summer
+    </label>
+
+    <br>
+    <label>
+        <input type="checkbox" value="Oversized" class="category">
+        Oversized
+    </label>
+
+    <br>
+
+   
+    <label>
+        <input type="checkbox" value="T-shirts" class="category">
+        T-shirts
+    </label>
+
+    <br>
+
+    <label>
+        <input type="checkbox" value="Shirts" class="category">
+        Shirts
+    </label>
+
+    <br>
+
+    <label>
+        <input type="checkbox" value="Floral" class="category">
+        Floral
+    </label>
+
+    <br>
+
+    <label>
+        <input type="checkbox" value="Fitted" class="category">
+        Fitted
+    </label>
+
+    <br>
+
+    <label>
+        <input type="checkbox" value="Formal" class="category">
+        Formal
+    </label>
+
+    <br>
+    <label>
+        <input type="checkbox" value="Cotton" class="category">
+        Cotton
+    </label>
+
+    <br>
+    <label>
+        <input type="checkbox" value="Party" class="category">
+        Party
+    </label>
+
+    <br>
+
+    <label>
+        <input type="checkbox" value="Casual" class="category">
+        Casual
+    </label>
+
+    <br><br>
+
+    <button id="doneBtn" class="mb-3 p-1 rounded-3xl hover:bg-green-900 hover:text-white" style="border:2px solid #344E41; width: 80px;">
+        Done
+    </button>
+    <br>
+
+    <button id="clearBtn" class="p-1 rounded-3xl hover:bg-green-900 hover:text-white" style="border:2px solid #344E41; ">
+        Clear Filters
+    </button>
+
+</div>
+      <!-- collection section -->
+       <section class="pt-28 px-4" >
+        
+        
+        <div id="men" class="flex flex-wrap justify-center gap-10 max-w-4xl mx-auto">
+            <div class="product" data-category="Oversized Summer Fitted Shirts" style="width: 190px;">
+                <img src="./Images/image-1.avif" alt="" class="w-full h-auto object-cover transform hover:scale-110 transition duration-300">
+                <p style="margin-top: 20px; font-family: 'Poppins', sans-serif;">Oversized Floral-Summer fit shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1450</p>
+            </div>
+             <div class="product" data-category="Casual Shirts" style="width: 190px;">
+                <img src="./Images/image-2.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Pattern casual party Shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$999</p>
+            </div>
+             <div class="product" data-category="Casual Oversized T-shirts" style="width: 190px;">
+                <img src="./Images/image-3.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Blue casual Duck cap oversized T-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1700</p>
+            </div>
+             <div cclass="product" data-category="Casual T-shirts Fitted" style="width: 190px;">
+                <img src="./Images/image-4.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Blue cotton Happy face fit casual t-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1350</p>
+            </div>
+             <div class="product" data-category="Casual Shirts Summer" style="width: 190px;">
+                <img src="./Images/image-7.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Black casual fit shirt-Summer fit</p>
+                <p class="text-green-900" style="font-weight: 700;">$1560</p>
+            </div>
+             <div class="product" data-category="Formal Shirts" style="width: 190px;">
+                <img src="./Images/iamge-8.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Castle printed blue Formal Shirts</p>
+                <p class="text-green-900" style="font-weight: 700;">$1299</p>
+            </div>
+            <div class="product" data-category="Casual T-shirts" style="width: 190px;">
+                <img src="./Images/image-15.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Batman lofo Casual t-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1099</p>
+            </div>
+            <div class="product" data-category="Formal Shirts" style="width: 190px;">
+                <img src="./Images/image-11.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Formal Luxe Shirt: Rich Coffee</p>
+                <p class="text-green-900" style="font-weight: 700;">$799</p>
+            </div>
+            <div class="product" data-category="Formal T-shirts Oversized"  style="width: 190px;">
+                <img src="./Images/image-14.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Oversized Formals: Los Angeles</p>
+                <p class="text-green-900" style="font-weight: 700;">$1250</p>
+            </div>
+            
+            <div class="product" data-category="Casual Shirts Cotton"  style="width: 190px;">
+                <img src="./Images/image-12.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Cotton Linen: Fiesta</p>
+                <p class="text-green-900" style="font-weight: 700;">$1450</p>
+            </div>
+             <div class="product" data-category="Casual Shirts"  style="width: 190px;">
+                <img src="./Images/image-13.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;"> Casual-Striped Sienna</p>
+                <p class="text-green-900" style="font-weight: 700;">$899</p>
+            </div>
+            <div class="product" data-category="Formal T-shirts Fitted"  style="width: 190px;">
+                <img src="./Images/image-16.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;"> Hotwheeler Striped fit t-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+            </div>
+            </div>
+            
+            <div id="women" class="flex flex-wrap justify-center gap-10 max-w-4xl mx-auto">
+            <div class="product" data-category="Casual Shirts"  style="width: 190px;">
+                <img src="./Images/women-1.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Casual animated shirt</p>shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1099</p>
+            </div>
+            <div class="product" data-category="Party Shirts"  style="width: 190px;">
+                <img src="./Images/wo.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Party wear shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$1699</p>
+            </div>
+            <div class="product" data-category="Autumn T-shirts Oversized"  style="width: 190px;">
+                <img src="./Images/women-2.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Gilmore Girls Autumn T-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+            </div>
+            <div class="product" data-category="Party T-shirts Oversized"  style="width: 190px;">
+                <img src="./Images/women-2avif.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Oversized party T-shirts</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+            </div>
+            <div class="product" data-category="Formal Shirts"  style="width: 190px;">
+                <img src="./Images/women-4.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Formal pink shirts</p>
+                <p class="text-green-900" style="font-weight: 700;">$1200</p>
+            </div>
+            <div class="product" data-category="Casual T-shirts Fitted"  style="width: 190px;">
+                <img src="./Images/women-6.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Casual Fitted T-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+            </div>
+            <div class="product" data-category="Cotton Shirts Floral"  style="width: 190px;">
+                <img src="./Images/image-5.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Cotton Linen Shirt:Floral</p>
+                <p class="text-green-900" style="font-weight: 700;">$1099</p>
+            </div>
+            <div class="product" data-category="Casual T-shirts Fitted Summer"  style="width: 190px;">
+                <img src="./Images/women-7.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Casual Fitted Summer t-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+            </div>
+            <div class="product" data-category="Formal Shirts"  style="width: 190px;">
+                <img src="./Images/women-10.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Black Dotted Formal Shirts</p>
+                <p class="text-green-900" style="font-weight: 700;">$850</p>
+            </div>
+            <div class="product" data-category="Casual T-shirts Fitted"  style="width: 190px;">
+                <img src="./Images/women-8.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Casual Fitted T-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$520</p>
+            </div>
+            <div class="product" data-category="Oversized Summer Shirts" style="width: 190px;">
+                <img src="./Images/women-9.avif" alt=""  class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Oversized Animated Summer T-shirt</p>
+                <p class="text-green-900" style="font-weight: 700;">$699</p>
+
+            </div>
+            <div class="product" data-category="Summer Shirts Party" style="width: 190px;"  >
+                <img src="./Images/women-11.avif" alt="" class="transform hover:scale-110 transition duration-300">
+                <p style="font-family: 'Poppins', sans-serif; margin-top: 20px;">Summer Animated Shirts-Party</p>
+                <p class="text-green-900" style="font-weight: 700;">$1200</p>
+            </div>
+
+        </div>
+       </section>
+        <!-- Footer -->
+  <section class="mt-10 p-10 flex flex-col gap-10 md:flex-row justify-between" style="background-color:#314C3B;">
+    <div class="flex flex-col  text-white " >
+      <img style="height: 150px; width: 250px;" src="./Images/Gemini_Generated_Image_t8ts37t8ts37t8ts.png" alt="">
+      <p>Consiously crafted,sustainable clothing,designed to last. <br> Organic fabrics and timeless style.</p>
+    </div>
+    <div class="text-white flex flex-col gap-2">
+      <div><h2 style="font-family: 'Cormorant', serif; font-weight: 800; font-size: x-large;">Shop</h2></div>
+      
+  
+        <ul class="list-none gap-2 flex flex-col">
+        <li><a href="index.html">Home</a></li>
+        <li><button  data-target="reviews">Reviews</button></li>
+        <li><button  data-target="wanted">Most Wanted</button></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      
+    </div>
+    <div class="text-white flex flex-col gap-2">
+      <div><h2 style="font-family: 'Cormorant', serif; font-weight: 800; font-size: x-large;">About</h2></div>
+      
+  
+        <ul class="list-none gap-2 flex flex-col">
+        <li><a href="">Our Story</a></li>
+        <li><button  data-target="reviews">Sustainability</button></li>
+        <li><button  data-target="wanted">FAQ</button></li>
+        <li><a href="collections.html">Size Guide</a></li>
+        <li><a href="contact.html">Journal</a></li>
+        </ul>
+      
+    </div>
+    <div>
+      <h2 style="font-family: 'Cormorant', serif; font-weight: 800; font-size: x-large; color: white; margin-bottom: 10px;">Stay Connected</h2>
+      <div class="flex flex-col gap-3 p-4" style="background-color: #E5DDCA;">
+        <h2>Join our Newsletter</h2>
+        
+          <input style="outline: none;" class="border bottom-1 border-green-800" type="email" name="" id="" placeholder="Enter your email">
+      
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 items-center  md:hidden">
+        <p style="opacity: .7; color: white; font-size: small;">&copy;2026 Nostra.All rights reserved</p>
+        <div class="flex gap-5 ">
+            <p style="opacity: .7; color: white; font-size: small;">Private Policy</p>
+            <p style="opacity: .7; color: white; font-size: small;">Terms of Service</p>
+        </div>
+    </div>
+  </section>
+       <script src="collections.js"></script>
+</body>
+</html>
