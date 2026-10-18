@@ -124,3 +124,23 @@ const filterBtn = document.getElementById("filterBtn");
         filterPopup.classList.add("hidden");
 
     });
+    // searchbar
+var productcontainer=document.getElementById("collections")
+var search=document.getElementById("searchbar")
+var productlist=productcontainer.querySelectorAll("div")
+
+search.addEventListener("keyup",function(){
+    var enteredvalue=event.target.value.toUpperCase()
+    
+    for(count=0;count<productlist.length;count++){
+        var productname=productlist[count].querySelector("p").textContent
+        if(productname.toUpperCase().indexOf(enteredvalue)<0){
+        productlist[count].style.display="none"
+    }
+    else{
+        productlist[count].style.display="block"
+    }
+    }
+    
+})
+
